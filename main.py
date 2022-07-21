@@ -16,7 +16,7 @@ df_new.rename(columns={"Genre": "top genre"}, inplace=True)
 df_new.rename(columns={"Energy": "nrgy"}, inplace=True)
 df_new.rename(columns={"Liveness": "live"}, inplace=True)
 
-# Multiplying the 'nrgy' and 'live' column of the new dataset to be a whole number
+# Multiplying the 'nrgy' and 'live' column of the new dataset by 100 to be a whole number
 warnings.filterwarnings("ignore")
 for i in range(0, len(df_new['title'])):
     # Some parts of the csv file had blank information, so we skip over that
