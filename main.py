@@ -2,6 +2,7 @@
 
 import pandas as pd
 import numpy as np
+from numpy.core.defchararray import lower
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 import warnings
@@ -63,7 +64,6 @@ cs = cosine_similarity(cm)
 # Get the title of the song that the user likes
 title = input("Please choose a song: ")
 
-# Get the song's id
 song_id = df_final[df_final.title == title]['song_id'].values[0]
 
 # Create a list of enumerations for the similarity scores
